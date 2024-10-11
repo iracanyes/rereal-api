@@ -10,6 +10,9 @@ import { Logger } from '@nestjs/common'; // Module not loaded with "@root"
 async function bootstrap() {
 	const app = await NestFactory.create(AppModule);
 
+	// Configure API prefix
+	app.setGlobalPrefix(configManager.getValue(ConfigKey.APP_BASE_URL));
+
 	// Add ExceptionFilter
 	app.useGlobalFilters(new HttpExceptionFilter());
 
