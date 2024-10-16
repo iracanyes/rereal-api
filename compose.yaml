@@ -35,7 +35,7 @@ services:
     user: postgres
     build:
       context: docker/db
-    restart: always
+    restart: unless-stopped
     # set shared memory limit when using docker-compose
     shm_size: 256mb
     #user: postgres
@@ -55,12 +55,6 @@ services:
       interval: 10s
       timeout: 5s
       retries: 5
-  adminer:
-    container_name: adminer
-    image: adminer
-    restart: always
-    ports:
-      - "8080:8080"
 volumes:
   euro-rereal-api-data:
 
