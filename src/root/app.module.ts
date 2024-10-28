@@ -4,10 +4,15 @@ import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import 'dotenv/config';
 import { configManager } from '@common/config';
+import { SecurityModule } from '@security/security.module';
+import { JwtGuard } from '@security/jwt';
 
 @Module({
-	imports: [TypeOrmModule.forRoot(configManager.getTypeOrmConfig())],
+	imports: [
+		TypeOrmModule.forRoot(configManager.getTypeOrmConfig()),
+		SecurityModule,
+	],
 	controllers: [AppController],
-	providers: [AppService],
+	providers: [{ provide: 'APP_GUARD', useClass: JwtGuard }, AppService],
 })
 export class AppModule {}

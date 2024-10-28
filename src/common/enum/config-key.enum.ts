@@ -1,6 +1,7 @@
 export enum ConfigKey {
 	APP_MODE = 'API_MODE',
 	APP_PORT = 'API_PORT',
+	APP_BASE_URL = 'API_BASE_URL',
 	APP_VERSION = 'API_VERSION',
 	DB_TYPE = 'DB_TYPE',
 	DB_NAME = 'DB_NAME',
