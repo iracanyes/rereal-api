@@ -48,4 +48,9 @@ export class SecurityController {
 
 		return this.securityService.delete(id, user);
 	}
+
+	@Get('sign-out')
+	public signOut(@User() user: Credential) {
+		return this.securityService.signOut(user);
+	}
 }

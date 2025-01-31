@@ -48,3 +48,9 @@ export class UnauthorizedOperationException extends ApiException {
 		super(ApiCodeResponse.UNAUTHORIZED_OPERATION_EXCEPTION, 401);
 	}
 }
+
+export class SignOutException extends ApiException {
+	constructor() {
+		super(ApiCodeResponse.SIGN_OUT_EXCEPTION, 401);
+	}
+}

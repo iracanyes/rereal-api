@@ -26,7 +26,7 @@ class ConfigManager {
 			type: this.getValue(ConfigKey.DB_TYPE) as any,
 			host: this.getValue(ConfigKey.DB_HOST),
 			port: parseInt(this.getValue(ConfigKey.DB_PORT)),
-			username: this.getValue(ConfigKey.DB_USER),
+			username: this.getValue(ConfigKey.DB_ADMIN),
 			password: this.getValue(ConfigKey.DB_PASSWORD),
 			database: this.getValue(ConfigKey.DB_NAME),
 			entities: [__dirname + '/../../**/*.entity{.ts,.js}'],

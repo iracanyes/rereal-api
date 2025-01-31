@@ -12,7 +12,7 @@ import { Exclude } from 'class-transformer';
 export class Credential {
 	@PrimaryColumn('varchar', {
 		length: 26,
-		default: () => `'${credentialPkGenerator()}'`,
+		default: () => `'${credentialPkGenerator(Date.now())}'`,
 	})
 	credential_id: string;
 
