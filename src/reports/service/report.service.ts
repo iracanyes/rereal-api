@@ -54,7 +54,7 @@ export class  ReportsService {
       let reportBuilder = Builder<Report>()
         .type(payload.type)
         .status(payload.status)
-        .additionalInformation(payload.additionalInformation);
+        .additionalInformation(payload.additional_info);
 
       // Get employee by email
       const employee = await this.employeeService.findOneByEmail(user.email);

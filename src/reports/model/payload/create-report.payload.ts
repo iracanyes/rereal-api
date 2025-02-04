@@ -17,7 +17,7 @@ export class CreateReportPayload {
   @ApiProperty()
   @IsString()
   @IsNotEmpty()
-  additionalInformation: string;
+  additional_info: string;
 
   @ApiProperty()
   @IsOptional()
