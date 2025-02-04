@@ -5,7 +5,7 @@ import { Credential } from './credential.entity';
 @Entity()
 export class Token {
 	@PrimaryColumn('varchar', {
-		length: 26,
+		length: 60,
 		default: () => `'${tokenPkGenerator()}'`,
 	})
 	token_id: string;

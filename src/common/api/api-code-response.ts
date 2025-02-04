@@ -8,4 +8,12 @@ export enum ApiCodeResponse {
 	USER_ALREADY_EXISTS = 'api.exception.user_already_exists',
 	TOKEN_GENERATION_EXCEPTION = 'api.exception.token_generation',
 	UNAUTHORIZED_OPERATION_EXCEPTION = 'api.exception.unauthorized_operation',
+	SIGN_OUT_EXCEPTION = 'api.exception.sign_out_error',
+	NO_REPORT_FOUND_EXCEPTION = 'api.exception.no_report_found',
+	NO_REPORT_ATTACHMENT_FOUND_EXCEPTION = 'api.exception.no_report_attachment_found',
+	CREATE_REPORT_EXCEPTION = 'api.exception.create_report_exception',
+	NO_APP_FOUND_EXCEPTION = 'api.exception.no_app_exception',
+	CREATE_APP_EXCEPTION = 'api.exception.create_app_exception',
+	NO_EQUIPMENT_FOUND_EXCEPTION = 'api.exception.no_equipment_exception',
+	NO_EMPLOYEE_FOUND_EXCEPTION = 'api.exception.no_employee_exception',
 }

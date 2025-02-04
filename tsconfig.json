@@ -21,7 +21,13 @@
       "@common/*": ["./common/*"],
       "@root": ["./root/index.ts"],
       "@root/*": ["./root/*"],
-      "@security/*": ["./security/*"]
+      "@security/*": ["./security/*"],
+      "@reports": ["./reports/index.ts"],
+      "@reports/*": ["./reports/*"],
+      "@application/*": ["./application/*"],
+      "@equipment": ["./equipment/index.ts"],
+      "@equipment/*": ["./equipment/*"],
+      "@employee/*": ["./employee/*"]
     }
   }
 }

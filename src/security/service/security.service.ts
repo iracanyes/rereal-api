@@ -10,6 +10,7 @@ import { Credential, Token } from '@security/model/entity';
 import { isNil } from 'lodash';
 import {
 	CredentialDeletedException,
+	SignOutException,
 	SignUpException,
 	UnauthorizedOperationException,
 	UserAlreadyExistsException,
@@ -23,7 +24,6 @@ import {
 import { SignUpPayload } from '@security/model/payload/sign-up.payload';
 import { Builder } from 'builder-pattern';
 import { RefreshPayload } from '@security/model/payload/refresh.payload';
-import { User } from '@common/config/metadata';
 
 @Injectable()
 export class SecurityService {
@@ -155,6 +155,15 @@ export class SecurityService {
 		} catch (e) {
 			this.logger.error(e);
 			throw new CredentialDeletedException();
+		}
+	}
+
+	async signOut(user: Credential): Promise<void> {
+		try {
+			await this.tokenService.deleteFor(user);
+		} catch (e) {
+			this.logger.error(e);
+			throw new SignOutException();
 		}
 	}
 }
